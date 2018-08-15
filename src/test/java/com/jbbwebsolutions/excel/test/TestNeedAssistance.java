@@ -17,8 +17,9 @@ public class TestNeedAssistance {
 	@CsvSource({"Passing, 81",
 				"Passing, 82",
 				"Passing, 83",
-				"Passing, 84",
+				"Excellent, 92",
 				"Passing, 89.99",
+				"Excellent, 90",
 				"Excellent, 90"	
 				})
 	
