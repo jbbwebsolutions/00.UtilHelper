@@ -1,0 +1,1 @@
+mvn install:install-file -Dfile=./target/00.UtilHelper-0.0.1-SNAPSHOT.jar -DgroupId=com.jbbwebsolutions.utils -DartifactId=utils -Dversion=1.0 -Dpackaging=jar 
