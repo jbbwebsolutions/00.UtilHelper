@@ -12,7 +12,7 @@ import com.jbbwebsolutions.excel.ExcelRange;
 
 public class TestNeedAssistance {
 	
-	@DisplayName("isEqualToOrGreaterThan")
+	@DisplayName("Passing | Excellent")
 	@ParameterizedTest(name = "\"{0}\" should be {1}")
 	@CsvSource({"Passing, 81",
 				"Passing, 82",
