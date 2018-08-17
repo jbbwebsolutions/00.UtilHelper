@@ -4,16 +4,17 @@ import java.math.BigDecimal;
 import java.math.BigInteger;
 
 public abstract class _Num {	
+	/* made the is methods public */
 	
-	protected static boolean isLessThan(Number i, Number j) {
+	public static boolean isLessThan(Number i, Number j) {
 		return compare(i, j) == -1;
 	}
 	
-	protected static boolean isLessThanOrEqualTo(Number i, Number j) {
+	public static boolean isLessThanOrEqualTo(Number i, Number j) {
 		return compare(i, j) == -1 || compare(i, j) == 0;
 	}
 	
-	protected static boolean isGreaterThan(Number i, Number j) {
+	public static boolean isGreaterThan(Number i, Number j) {
 		return compare(i, j) == 1;
 	}
 
