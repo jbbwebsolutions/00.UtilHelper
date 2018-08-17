@@ -3,7 +3,6 @@ package com.jbbwebsolutions.excel.test;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
@@ -11,26 +10,19 @@ import org.junit.jupiter.params.provider.CsvSource;
 import com.jbbwebsolutions.excel.Calculate;
 import com.jbbwebsolutions.excel.ExcelRange;
 
-<<<<<<< HEAD
 
-/*
- * We are in the master 
- * branch
- */
-
-=======
 /*
  * added the @BeforeAll occurs only once
  * and must be static
  * 
  */
->>>>>>> alternate
+
 public class TestNeedAssistance {
 	
 	static ExcelRange<String> range = new ExcelRange<String>();
 	
-	//@BeforeEach
-	@BeforeAll
+	//@BeforeEach -- instance variable
+	@BeforeAll // better with static variables
 	static void  _before() {
 		System.out.println("BeforeEach");
 		range.build(90,"Excellent")
