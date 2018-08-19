@@ -10,11 +10,27 @@ import org.junit.jupiter.params.provider.CsvSource;
 import com.jbbwebsolutions.utils.Clazz;
 
 class TestClazz {
+	
+	
+	@DisplayName("String, and Integer Method Call")
+	@Test
+	void theIsNumberTest() {
+		String className = "com.jbbwebsolutions.utils.StringUtility";
+		String method = "isNumber";
+		Class<?>[] parameterTypes = {String.class};
+		
+		Object[] arguments =  {"4"}  ;
+		boolean i = Clazz.execute(className, method, parameterTypes, arguments  );
+		
+		assertTrue(i == true);	
+		
+	}
+	
 
 	@DisplayName("String, and Integer Method Call")
 	@Test
 	void test() {
-		String className = "com.jbbwebsolutions.utils.Foo";
+		String className = "com.jbbwebsolutions.pseudo.model.Foo";
 		String method = "getNum";
 		Class<?>[] parameterTypes = {String.class, Integer.TYPE};
 		
@@ -29,7 +45,7 @@ class TestClazz {
 	@DisplayName("-String, and Integer Method Call")
 	@Test
 	void test2() {
-		String className = "com.jbbwebsolutions.utils.Foo";
+		String className = "com.jbbwebsolutions.pseudo.model.Foo";
 		String method = "getNum";
 		Class<?>[] parameterTypes = {String.class, Integer.TYPE};
 		
@@ -43,7 +59,7 @@ class TestClazz {
 	@DisplayName("Integer Method Call")
 	@Test
 	void test3() {
-		String className = "com.jbbwebsolutions.utils.Foo";
+		String className = "com.jbbwebsolutions.pseudo.model.Foo";
 		String method = "getNum";
 		Class<?>[] parameterTypes = {Integer.TYPE};
 		
@@ -65,7 +81,7 @@ class TestClazz {
 	})
 	public void testDynamicMethods(String method, int a, int b, int result) {	
 		
-		String className = "com.jbbwebsolutions.utils.Foo";	
+		String className = "com.jbbwebsolutions.pseudo.model.Foo";	
 		Class<?>[] parameterTypes = {Integer.TYPE, Integer.TYPE};		
 		Object[] arguments =  {a,b}  ;
 		int expectedValue = Clazz.execute(className, method, parameterTypes, arguments  );	

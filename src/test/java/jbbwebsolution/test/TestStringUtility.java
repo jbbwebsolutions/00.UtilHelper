@@ -9,12 +9,8 @@ class TestStringUtility {
 
 	@Test
 	void test() {
-		boolean x = isNumber("444");	
-		assertTrue(x);
-		
-		
-		
-		
+		boolean x = isNumber("4423");	
+		assertTrue(x);		
 	}
 
 }

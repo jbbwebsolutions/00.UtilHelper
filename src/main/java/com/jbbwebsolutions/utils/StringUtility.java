@@ -6,7 +6,7 @@ public abstract class StringUtility {
 	    return str.substring(0, str.length() - 1);
 	}	
 	
-	private static final String regex = "[0-9]";
+	private static final String regex = "-?\\d+(\\.\\d+)?";
 	
 	public static boolean isNumber(String data) {				
 		return data.matches(regex);		
