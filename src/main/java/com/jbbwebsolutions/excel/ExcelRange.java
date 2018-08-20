@@ -5,6 +5,30 @@ import java.util.Map;
 import java.util.TreeMap;
 import java.util.function.Predicate;
 
+/**
+ * float grade = 82;
+ * 
+ * ExcelRange<String> range = new ExcelRange<String>();
+ * 		
+ * 		
+ * range.build(90,"Excellent")	     
+ * 	     .build(95.5f,"Excellent With Honors")
+ *       .build(80,"Very Good")
+ *       .build(70, "Average")
+ *       .build(75, "Better than Average")
+ *       .build(65, "Passing")
+ *       .build(60, "BorderLine Passing")
+ *       .build(0f, "Failing");
+ *       
+ *       String gradeStatus = Calculate.vLookup(grade, range);
+ *       
+ * <p> gradeStatus will return the value Very good </b>
+ * 
+ * @author jbbwe
+ *
+ * @param <T>
+ */
+
 public class ExcelRange<T> {
 
 	private Map<Number, T> map = new TreeMap<>(new DescendingOrder());
