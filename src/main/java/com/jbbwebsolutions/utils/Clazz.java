@@ -5,7 +5,7 @@ import java.lang.reflect.*;
 public abstract class Clazz {
 	
 	/** 
-	 * <p>The objective is to create execute a method
+	 * <p>The objective is to create execute a <b>method</b>
 	 * by knowing the name of the class and method names.
 	 * </p> 
 	 * 
@@ -18,19 +18,17 @@ public abstract class Clazz {
 	 *  System.out.println(i);
 	 *  System.out.println(i2);
 	 *  
-	 *  @author  jbbwebsolutions
+	 *  @author  jbbwebsolutions of Jean Boulet
 	 *  @see     n/a
 	 *  @since   JDK8.0		 
 	 * 
-	 */
-	
+	 */	
 	
 	public static <T> T execute(String className, String method) {	
 		Class<?>[] parameterTypes = {};		
 		T t  =execute(className, method, parameterTypes);		
 		return t;
-	}
-	
+	}	
 	
 	@SuppressWarnings("unchecked")
 	public static <T> T execute(String className, String method, Class<?>[] parameterTypes, Object... args) {
